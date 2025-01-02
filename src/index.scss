@@ -70,7 +70,6 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
   
@@ -160,5 +159,13 @@ body {
       .items-container {
         padding: 5% 5%;
       }
+    }
+    .container-github h1 {
+      font-size: 1.5rem;
+    }
+  
+    .calendar-container {
+      padding: 5px;
+      border-radius: 6px;
     }
   }
