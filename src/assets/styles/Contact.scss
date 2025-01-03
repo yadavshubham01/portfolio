@@ -20,6 +20,7 @@
 
   fieldset {
     background-color: white;
+    color: #333;
   }
 }
 
@@ -45,4 +46,20 @@ form {
 .body-form {
   width: 100% !important;
   margin-bottom: 15px !important;
+}
+
+.contact_wrapper {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+
+  h1 {
+    color: #333;
+  }
+
+  p {
+    color: #555;
+  }
+   
+  
 }
