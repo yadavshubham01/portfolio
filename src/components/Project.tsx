@@ -1,6 +1,6 @@
 import React from "react";
 
-import mock05 from '../assets/images/mock05.png';
+import mock05 from '../assets/images/mock12.png';
 import mock06 from '../assets/images/mock06.png';
 import mock07 from '../assets/images/mock07.png';
 import mock08 from '../assets/images/mock08.png';
@@ -39,9 +39,9 @@ function Project() {
                 <p>Real-Time Chat is a dynamic chat application built with raw WebSockets in Node.js, enabling admins to create customizable chat rooms with features like live messaging, upvote-based message prioritization, and real-time alerts for highly upvoted messages, ensuring an engaging and interactive user experience.</p>
             </div>
             <div className="project">
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><h2>PayTM</h2></a>
-                <p>PayTM is a secure and user-friendly digital wallet application designed for seamless transactions, allowing users to manage their finances efficiently. With features like instant payments, transaction tracking, and easy fund transfers, it simplifies everyday financial activities.</p>
+                <a href="https://techcare-9nyjdwt0t-yadavshubham01s-projects.vercel.app/" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://techcare-9nyjdwt0t-yadavshubham01s-projects.vercel.app/" target="_blank" rel="noreferrer"><h2>Tech Care</h2></a>
+                <p>TechCare is a web application designed to enhance healthcare services by streamlining doctor-patient interactions. It provides features like appointment scheduling, patient management, and seamless communication tools, ensuring a user-friendly experience.</p>
             </div>
         </div>
     </div>
