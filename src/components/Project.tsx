@@ -14,11 +14,6 @@ function Project() {
         <h1>Personal Projects</h1>
         <div className="projects-grid">
             <div className="project">
-                <a href="https://mate-x.vercel.app/" target="_blank" rel="noreferrer"><img src={mock10} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://mate-x.vercel.app/" target="_blank" rel="noreferrer"><h2>MateX</h2></a>
-                <p>Build teams to bring their ideas to life. Leveraged technologies such as React for the frontend, Node.js and Express for the backend, MongoDB for data storage, and integrated real-time messaging using Socket.IO. Implemented user authentication with JWT, Google OAuth, and features like project liking, commenting, and sharing to enhance user engagement and interaction.</p>
-            </div>
-            <div className="project">
                 <a href="https://resume-craft-five.vercel.app/" target="_blank" rel="noreferrer"><img src={mock11} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://resume-craft-five.vercel.app/" target="_blank" rel="noreferrer"><h2>ResumeCraft</h2></a>
                 <p>ResumeCraft is an intuitive resume-building application designed to help users create professional and customizable resumes effortlessly. The platform offers a variety of templates, real-time previews, and AI-powered content suggestions, ensuring that users can highlight their skills and experiences effectively.</p>
@@ -42,6 +37,11 @@ function Project() {
                 <a href="https://techcare-9nyjdwt0t-yadavshubham01s-projects.vercel.app/" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://techcare-9nyjdwt0t-yadavshubham01s-projects.vercel.app/" target="_blank" rel="noreferrer"><h2>Tech Care</h2></a>
                 <p>TechCare is a web application designed to enhance healthcare services by streamlining doctor-patient interactions. It provides features like appointment scheduling, patient management, and seamless communication tools, ensuring a user-friendly experience.</p>
+            </div>
+            <div className="project">
+                <a href="https://mate-x.vercel.app/" target="_blank" rel="noreferrer"><img src={mock10} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://mate-x.vercel.app/" target="_blank" rel="noreferrer"><h2>MateX</h2></a>
+                <p>Build teams to bring their ideas to life. Leveraged technologies such as React for the frontend, Node.js and Express for the backend, MongoDB for data storage, and integrated real-time messaging using Socket.IO. Implemented user authentication with JWT, Google OAuth, and features like project liking, commenting, and sharing to enhance user engagement and interaction.</p>
             </div>
         </div>
     </div>

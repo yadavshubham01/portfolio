@@ -9,7 +9,8 @@ import {
 } from "./components";
 import FadeIn from './components/FadeIn';
 import './index.scss';
-import Github from "./components/Github";
+import Timeline from "./components/Timeline";
+import CodingProfiles from "./components/CodeProfile";
 
 function App() {
     const [mode, setMode] = useState<string>('dark');
@@ -32,7 +33,8 @@ function App() {
         <FadeIn transitionDuration={700}>
             <Main/>
             <Expertise/>
-            <Github/>
+            <Timeline/>
+            <CodingProfiles/>
             <Project/>
             <Contact/>
         </FadeIn>
