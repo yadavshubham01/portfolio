@@ -17,10 +17,10 @@ function Timeline() {
           {/* Open Healthcare Network */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
+            contentStyle={{ background: "white", color: "rgb(10 19 29)" }}
             contentArrowStyle={{ borderRight: "7px solid white" }}
             date="May 2025 – Current"
-            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
+            iconStyle={{ background: "#5000ca", color: "rgb(10 19 29)" }}
             icon={<FontAwesomeIcon icon={faBriefcase as any} />}
           >
             <h3 className="vertical-timeline-element-title">
@@ -53,7 +53,7 @@ function Timeline() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="Jan 2025 – Mar 2025"
-            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
+            iconStyle={{ background: "#5000ca", color: "rgb(10 19 29)" }}
             icon={<FontAwesomeIcon icon={faBriefcase as any} />}
           >
             <h3 className="vertical-timeline-element-title">
@@ -86,7 +86,7 @@ function Timeline() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="Nov 2024 – Jan 2025"
-            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
+            iconStyle={{ background: "#5000ca", color: "rgb(10 19 29)" }}
             icon={<FontAwesomeIcon icon={faCodeBranch as any} />}
           >
             <h3 className="vertical-timeline-element-title">
