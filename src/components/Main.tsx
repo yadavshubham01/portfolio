@@ -13,15 +13,15 @@ function Main() {
         </div>
         <div className="content">
           <div className="social_icons">
-            <a href="https://github.com/yadavshubham01" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/shubham-yadav01" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a id="icons" href="https://github.com/yadavshubham01" target="_blank" rel="noreferrer"><GitHubIcon/></a>
+            <a id="icons" href="https://www.linkedin.com/in/shubham-yadav01" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
           <h1>Shubham Yadav</h1>
-          <p>Full Stack Engineer</p>
+          <p>Software Engineer</p>
 
           <div className="mobile_social_icons">
-            <a href="https://github.com/yadavshubham01" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/shubham-yadav01" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a id="icons" href="https://github.com/yadavshubham01" target="_blank" rel="noreferrer"><GitHubIcon/></a>
+            <a id="icons" href="https://www.linkedin.com/in/shubham-yadav01" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
         </div>
       </div>

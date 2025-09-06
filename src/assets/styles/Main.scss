@@ -49,7 +49,7 @@
     }
 }
 
-.about-section .image-wrapper {
+.image-wrapper {
     z-index: 2;
     img {
         width: 150px;
@@ -61,6 +61,22 @@
     text-align: center;
     padding-top: 30%;
     padding-bottom: 30%;
+}
+
+.about-section {
+  position: relative;
+  background: url("../images/bg-dark.png") repeat;
+  background-size: cover;
+  animation: moveBg 20s linear infinite;
+}
+
+@keyframes moveBg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 1000px; /* change 1000px for speed/direction */
+  }
 }
 
 @media screen {

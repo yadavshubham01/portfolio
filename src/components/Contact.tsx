@@ -1,56 +1,48 @@
-import React, { useRef, useState } from 'react';
-import '../assets/styles/Contact.scss';
-import emailjs from '@emailjs/browser';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
-import TextField from '@mui/material/TextField';
-
+import React, { useRef, useState } from "react";
+import "../assets/styles/Contact.scss";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
-
-  const [name, setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [message, setMessage] = useState<string>('');
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
   const [nameError, setNameError] = useState<boolean>(false);
   const [emailError, setEmailError] = useState<boolean>(false);
   const [messageError, setMessageError] = useState<boolean>(false);
 
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
   const token = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
-  const ServiceKey = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-  const template_id =process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-  console.log(token,ServiceKey,template_id)
-  const sendEmail = (e: any) => {
+  const serviceKey = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+
+  const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
-    setNameError(name === '');
-    setEmailError(email === '');
-    setMessageError(message === '');
+    setNameError(name === "");
+    setEmailError(email === "");
+    setMessageError(message === "");
 
-    
+    if (name !== "" && email !== "" && message !== "") {
+      const templateParams = {
+        name,
+        email,
+        message,
+      };
 
-     if (name !== '' && email !== '' && message !== '') {
-       var templateParams = {
-         name: name,
-         email: email,
-         message: message
-       };
-
-       console.log(templateParams);
-       emailjs.send(`${ServiceKey}`, `${template_id}`, templateParams, `${token}`).then(
+      emailjs.send(`${serviceKey}`, `${templateId}`, templateParams, `${token}`).then(
         (response) => {
-          console.log('SUCCESS!', response.status, response.text);
+          console.log("SUCCESS!", response.status, response.text);
         },
-         (error) => {
-           console.log('FAILED...', error);
-         },
-       );
-       setName('');
-       setEmail('');
-      setMessage('');
-     }
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
+
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
   };
 
   return (
@@ -59,59 +51,50 @@ function Contact() {
         <div className="contact_wrapper">
           <h1>Contact Me</h1>
           <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
-          <Box
-            ref={form}
-            component="form"
-            noValidate
-            autoComplete="off"
-            className='contact-form'
-          >
-            <div className='form-flex'>
-              <TextField
-                required
-                id="outlined-required"
-                label="Your Name"
-                placeholder="What's your name?"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-                error={nameError}
-                helperText={nameError ? "Please enter your name" : ""}
-              />
-              <TextField
-                required
-                id="outlined-required"
-                label="Email / Phone"
-                placeholder="How can I reach you?"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-                error={emailError}
-                helperText={emailError ? "Please enter your email or phone number" : ""}
-              />
+
+          <form ref={form} onSubmit={sendEmail} className="contact-form">
+            <div className="form-flex">
+              <div className="form-group">
+                <label>Your Name</label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className={nameError ? "error" : ""}
+                  placeholder="What's your name?"
+                />
+                {nameError && <small>Please enter your name</small>}
+              </div>
+
+              <div className="form-group">
+                <label>Email / Phone</label>
+                <input
+                  type="text"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className={emailError ? "error" : ""}
+                  placeholder="How can I reach you?"
+                />
+                {emailError && <small>Please enter your email or phone</small>}
+              </div>
             </div>
-            <TextField
-              required
-              id="outlined-multiline-static"
-              label="Message"
-              placeholder="Send me any inquiries or questions"
-              multiline
-              rows={10}
-              className="body-form"
-              value={message}
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
-              error={messageError}
-              helperText={messageError ? "Please enter the message" : ""}
-              
-            />
-            <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
+
+            <div className="form-group">
+              <label>Message</label>
+              <textarea
+                rows={6}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className={messageError ? "error" : ""}
+                placeholder="Send me any inquiries or questions"
+              />
+              {messageError && <small>Please enter your message</small>}
+            </div>
+
+            <button type="submit" className="send-btn">
               Send
-            </Button>
-          </Box>
+            </button>
+          </form>
         </div>
       </div>
     </div>

@@ -17,19 +17,27 @@ body {
   .main-container {
     position: relative;
     background-color: #0d1116;
-  
   }
   
   a {
+    color: #062f64;
     text-decoration: none;
   }
-  
+
+  #icons {
+  color: white;
+}
+  #icons:hover {
+  color: #838486;
+  transition: color 0.3s ease;
+}
+
   a:hover {
-    color: #5000ca;
+    color: #1210a3;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
   }
-  
-  p, a, h1, h2, h3, h4, h5, label, button {
+
+  p, h1, h2, h3, h4, h5, label, button {
     color: white;
     font-family: "Lato", sans-serif;
   }
@@ -106,13 +114,24 @@ body {
     .navigation-bar {
       background-color: #f8f9fa;
     }
-  
-    p, a, h1, h2, h3, h4, h5, label, button {
+    a {
+    color: #062f64;
+    text-decoration: none;
+  }
+
+  #icons {
+  color: rgb(61, 60, 60);
+}
+  #icons:hover {
+  color: #545d70;
+  transition: color 0.3s ease;
+}
+    p, h1, h2, h3, h4, h5, label, button {
       color: #0d1116;
     }
   
     a:hover {
-      color: #5000ca;
+      color: #1b0f9c;
       transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
     }
   
